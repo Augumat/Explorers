@@ -19,7 +19,7 @@ public class Question1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "clicked A");
-                openQuestion2();
+                openActivityResult();
             }
         });
         Button answerB = findViewById(R.id.answerB);
@@ -27,7 +27,7 @@ public class Question1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "clicked B");
-                openQuestion2();
+                openActivityResult();
             }
         });
         Button answerC = findViewById(R.id.answerC);
@@ -35,7 +35,7 @@ public class Question1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "clicked C");
-                openQuestion2();
+                openActivityResult();
             }
         });
         Button answerD = findViewById(R.id.answerD);
@@ -43,11 +43,11 @@ public class Question1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "clicked D");
-                openQuestion2();
+                openActivityResult();
             }
         });
     }
-    public void openQuestion2() {
+    public void openActivityResult() {
         Intent openResult = new Intent(this, Question2.class);
         startActivity(openResult);
     }
