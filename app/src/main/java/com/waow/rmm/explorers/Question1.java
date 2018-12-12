@@ -3,7 +3,7 @@ package com.waow.rmm.explorers;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class question1 extends AppCompatActivity {
+public class Question1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

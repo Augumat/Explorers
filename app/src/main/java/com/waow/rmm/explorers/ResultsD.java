@@ -1,6 +1,6 @@
 package com.waow.rmm.explorers;
 
-public class resultsC
+public class ResultsD
 {
 
 }
