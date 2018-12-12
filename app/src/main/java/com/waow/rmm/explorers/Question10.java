@@ -121,4 +121,10 @@ public class Question10 extends AppCompatActivity
         }
         startActivity(openResult);
     }
+    
+    @Override
+    protected void onPause() {
+        super.onPause();
+        AudioHandler.stop();
+    }
 }

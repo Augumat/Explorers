@@ -23,7 +23,7 @@ public class ResultsD extends AppCompatActivity
         getWindow().setEnterTransition(new Fade(Fade.MODE_IN));
         getWindow().setExitTransition(new Fade(Fade.MODE_OUT));
     
-        //Music Player stuff
+        AudioHandler.start(getApplicationContext(), 2);
         
         Button resetQuiz = findViewById(R.id.resetQuiz);
         resetQuiz.setOnClickListener(new View.OnClickListener() {
@@ -40,5 +40,11 @@ public class ResultsD extends AppCompatActivity
         Intent openQuestion = new Intent(this, MainActivity.class);
         QuizHandler.reset();
         startActivity(openQuestion);
+    }
+    
+    @Override
+    protected void onPause() {
+        super.onPause();
+        AudioHandler.stop();
     }
 }

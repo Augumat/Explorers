@@ -1,5 +1,6 @@
 package com.waow.rmm.explorers;
 
+import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -28,9 +29,7 @@ public class MainActivity extends AppCompatActivity
         getWindow().setEnterTransition(new Fade(Fade.MODE_IN));
         getWindow().setExitTransition(new Fade(Fade.MODE_OUT));
         
-        player = MediaPlayer.create(getApplicationContext(), R.raw.welcome);
-        player.setLooping(true);
-        player.start();
+        AudioHandler.start(getApplicationContext(), 0);
         
         Button beginQuiz = findViewById(R.id.beginQuiz);
         beginQuiz.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +50,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onPause() {
         super.onPause();
-        player.stop();
-        player.release();
+        AudioHandler.stop();
     }
 }

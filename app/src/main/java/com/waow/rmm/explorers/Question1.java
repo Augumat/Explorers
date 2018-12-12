@@ -21,7 +21,7 @@ public class Question1 extends AppCompatActivity {
         getWindow().setEnterTransition(new Fade(Fade.MODE_IN));
         getWindow().setExitTransition(new Fade(Fade.MODE_OUT));
     
-        //Music Player stuff
+        AudioHandler.start(getApplicationContext(), 1);
         
         Button answerA = findViewById(R.id.answerA);
         answerA.setOnClickListener(new View.OnClickListener() {
