@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Explorers</string>
+    <string name="begin_quiz">Begin Quiz</string>
 </resources>
