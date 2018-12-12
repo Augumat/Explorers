@@ -24,6 +24,7 @@ public class ResultsD extends AppCompatActivity
             public void onClick(View v) {
                 Log.d(TAG, "back to main");
                 openActivityReset();
+                return;
             }
         });
     }

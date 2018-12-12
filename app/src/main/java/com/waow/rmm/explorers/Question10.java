@@ -23,7 +23,14 @@ public class Question10 extends AppCompatActivity
             public void onClick(View v) {
                 Log.d(TAG, "finish quiz");
                 Quiz.add("a");
-                openActivityResults(Quiz.tally());
+                try
+                {
+                    openActivityResults(Quiz.tally());
+                }
+                catch (IllegalArgumentException e)
+                {
+                    openActivityResults(0);
+                }
             }
         });
     
@@ -33,7 +40,14 @@ public class Question10 extends AppCompatActivity
             public void onClick(View v) {
                 Log.d(TAG, "finish quiz");
                 Quiz.add("bb");
-                openActivityResults(Quiz.tally());
+                try
+                {
+                    openActivityResults(Quiz.tally());
+                }
+                catch (IllegalArgumentException e)
+                {
+                    openActivityResults(0);
+                }
             }
         });
     
@@ -43,7 +57,14 @@ public class Question10 extends AppCompatActivity
             public void onClick(View v) {
                 Log.d(TAG, "finish quiz");
                 Quiz.add("ccc");
-                openActivityResults(Quiz.tally());
+                try
+                {
+                    openActivityResults(Quiz.tally());
+                }
+                catch (IllegalArgumentException e)
+                {
+                    openActivityResults(0);
+                }
             }
         });
     
@@ -53,15 +74,25 @@ public class Question10 extends AppCompatActivity
             public void onClick(View v) {
                 Log.d(TAG, "finish quiz");
                 Quiz.add("dddd");
-                openActivityResults(Quiz.tally());
+                try
+                {
+                    openActivityResults(Quiz.tally());
+                }
+                catch (IllegalArgumentException e)
+                {
+                    openActivityResults(0);
+                }
             }
         });
     }
     
-    public void openActivityResults(int which) {
+    public void openActivityResults(int which) throws IllegalArgumentException {
         Intent openResult;
         switch (which)
         {
+            case 0:
+                startActivity(new Intent(this, MainActivity.class));
+                return;
             case 1:
                 openResult = new Intent(this, ResultsA.class);
                 break;
@@ -75,8 +106,7 @@ public class Question10 extends AppCompatActivity
                 openResult = new Intent(this, ResultsD.class);
                 break;
             default:
-                openResult = new Intent(this, ResultsA.class);
-                break;
+                throw new IllegalArgumentException();
         }
         startActivity(openResult);
     }
