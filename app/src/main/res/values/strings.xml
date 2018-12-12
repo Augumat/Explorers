@@ -49,15 +49,10 @@
     <string name="you_are">You are...</string>
     <string name="charmander">Charmander!</string>
     <string name="charmanders">Charmander</string>
-    <string name="you_are">You are...</string>
     <string name="squirtle">Squirtle!</string>
-    <string name="todo">TODO</string>
     <string name="pikachu">Pikachu!</string>
     <string name="bulbasaur">Bulbasaur!</string>
-    <string name="you_are">You are...</string>
     <string name="todo">TODO</string>
     <string name="pikachupicture">pikachuPicture</string>
-    <string name="you_aree">You are:</string>
-    <string name="you_ares">You are..</string>
-    <string name="you_are1">You are....</string>
+    <string name="bulbasaurPicture">pikachuPicture</string>
 </resources>
