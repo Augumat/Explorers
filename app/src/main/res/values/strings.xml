@@ -55,4 +55,5 @@
     <string name="todo">TODO</string>
     <string name="pikachupicture">pikachuPicture</string>
     <string name="bulbasaurPicture">pikachuPicture</string>
+    <string name="main_menu">Main Menu</string>
 </resources>
