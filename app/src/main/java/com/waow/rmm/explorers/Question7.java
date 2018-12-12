@@ -8,8 +8,9 @@ import android.view.View;
 import android.widget.Button;
 
 public class Question7 extends AppCompatActivity {
-
-    final String TAG = "clickedAnswer";
+    /** The logging tag for this class. */
+    private final static String TAG = "Question7";
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -10,7 +10,7 @@ import android.widget.Button;
 public class Question10 extends AppCompatActivity
 {
     /** The logging tag for this class. */
-    private final static String TAG = "MainActivity";
+    private final static String TAG = "Question10";
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
