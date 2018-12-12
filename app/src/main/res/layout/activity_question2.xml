@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Question6"
-    android:background="@drawable/pokemonbluebackground"
-    >
+    tools:context=".Question2"
 
+    >
     <TextView
         android:id="@+id/questionText"
         style="@style/Widget.AppCompat.Button.Colored"
@@ -87,7 +86,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
-
-
 
 </android.support.constraint.ConstraintLayout>
