@@ -19,6 +19,7 @@ public class Question4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "clicked A");
+                Quiz.add("a");
                 openActivityResult();
             }
         });
@@ -27,6 +28,7 @@ public class Question4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "clicked B");
+                Quiz.add("bb");
                 openActivityResult();
             }
         });
@@ -35,6 +37,7 @@ public class Question4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "clicked C");
+                Quiz.add("ccc");
                 openActivityResult();
             }
         });
@@ -43,6 +46,7 @@ public class Question4 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "clicked D");
+                Quiz.add("dddd");
                 openActivityResult();
             }
         });
