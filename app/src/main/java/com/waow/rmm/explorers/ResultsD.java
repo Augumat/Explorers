@@ -17,9 +17,9 @@ public class ResultsD extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results_d);
-        
-        Button beginQuiz = findViewById(R.id.beginQuiz);
-        beginQuiz.setOnClickListener(new View.OnClickListener() {
+    
+        Button resetQuiz = findViewById(R.id.resetQuiz);
+        resetQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "back to main");
