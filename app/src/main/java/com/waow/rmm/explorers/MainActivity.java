@@ -1,6 +1,7 @@
 package com.waow.rmm.explorers;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.transition.Fade;
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity
 {
     /** The logging tag for this class. */
     private static final String TAG = "MainActivity";
+    /** Plays music. */
+    private MediaPlayer player;
     
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -25,7 +28,9 @@ public class MainActivity extends AppCompatActivity
         getWindow().setEnterTransition(new Fade(Fade.MODE_IN));
         getWindow().setExitTransition(new Fade(Fade.MODE_OUT));
         
-        //Music Player stuff
+        player = MediaPlayer.create(getApplicationContext(), R.raw.welcome);
+        player.setLooping(true);
+        player.start();
         
         Button beginQuiz = findViewById(R.id.beginQuiz);
         beginQuiz.setOnClickListener(new View.OnClickListener() {
@@ -41,5 +46,12 @@ public class MainActivity extends AppCompatActivity
     public void openActivityQuestion() {
         Intent openQuestion = new Intent(this, Question1.class);
         startActivity(openQuestion);
+    }
+    
+    @Override
+    protected void onPause() {
+        super.onPause();
+        player.stop();
+        player.release();
     }
 }
