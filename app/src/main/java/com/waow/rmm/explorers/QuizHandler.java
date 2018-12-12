@@ -2,7 +2,7 @@ package com.waow.rmm.explorers;
 
 import java.util.ArrayList;
 
-public class Quiz
+public class QuizHandler
 {
     private static ArrayList<String> answers;
     public static void add(String toAdd)

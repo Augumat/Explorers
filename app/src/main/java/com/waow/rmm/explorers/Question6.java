@@ -3,9 +3,11 @@ package com.waow.rmm.explorers;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Fade;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class Question6 extends AppCompatActivity {
     /** The logging tag for this class. */
@@ -15,12 +17,18 @@ public class Question6 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question6);
+    
+        getWindow().setEnterTransition(new Fade(Fade.MODE_IN));
+        getWindow().setExitTransition(new Fade(Fade.MODE_OUT));
+    
+        //Music Player stuff
+        
         Button answerA = findViewById(R.id.answerA);
         answerA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "clicked A");
-                Quiz.add("a");
+                QuizHandler.add("a");
                 openActivityResult();
             }
         });
@@ -29,7 +37,7 @@ public class Question6 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "clicked B");
-                Quiz.add("bb");
+                QuizHandler.add("bb");
                 openActivityResult();
             }
         });
@@ -38,7 +46,7 @@ public class Question6 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "clicked C");
-                Quiz.add("ccc");
+                QuizHandler.add("ccc");
                 openActivityResult();
             }
         });
@@ -47,7 +55,7 @@ public class Question6 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "clicked D");
-                Quiz.add("dddd");
+                QuizHandler.add("dddd");
                 openActivityResult();
             }
         });

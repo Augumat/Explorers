@@ -3,9 +3,11 @@ package com.waow.rmm.explorers;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Fade;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class Question10 extends AppCompatActivity
 {
@@ -16,16 +18,22 @@ public class Question10 extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question10);
+    
+        getWindow().setEnterTransition(new Fade(Fade.MODE_IN));
+        getWindow().setExitTransition(new Fade(Fade.MODE_OUT));
+    
+        //Music Player stuff
         
         Button answerA = findViewById(R.id.answerA);
         answerA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "finish quiz");
-                Quiz.add("a");
+                QuizHandler.add("a");
+                //Music player stuff
                 try
                 {
-                    openActivityResults(Quiz.tally());
+                    openActivityResults(QuizHandler.tally());
                 }
                 catch (IllegalArgumentException e)
                 {
@@ -39,10 +47,11 @@ public class Question10 extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "finish quiz");
-                Quiz.add("bb");
+                QuizHandler.add("bb");
+                //Music player stuff
                 try
                 {
-                    openActivityResults(Quiz.tally());
+                    openActivityResults(QuizHandler.tally());
                 }
                 catch (IllegalArgumentException e)
                 {
@@ -56,10 +65,11 @@ public class Question10 extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "finish quiz");
-                Quiz.add("ccc");
+                QuizHandler.add("ccc");
+                //Music player stuff
                 try
                 {
-                    openActivityResults(Quiz.tally());
+                    openActivityResults(QuizHandler.tally());
                 }
                 catch (IllegalArgumentException e)
                 {
@@ -73,10 +83,11 @@ public class Question10 extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "finish quiz");
-                Quiz.add("dddd");
+                QuizHandler.add("dddd");
+                //Music player stuff
                 try
                 {
-                    openActivityResults(Quiz.tally());
+                    openActivityResults(QuizHandler.tally());
                 }
                 catch (IllegalArgumentException e)
                 {
